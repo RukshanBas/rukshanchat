@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: Tab3Page,
+  },
+  {
+    path: 'to-add-new-contact',
+    loadChildren: () => import('./to-add-new-contact/to-add-new-contact.module').then( m => m.ToAddNewContactPageModule)
   }
 ];
 

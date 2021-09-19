@@ -1,0 +1,22 @@
+<ion-card id = "uploadModal">
+<ion-header>
+  <ion-button color="danger" (click)= "closeModal($event)"><ion-icon name="close-circle-outline"></ion-icon></ion-button>
+</ion-header>
+  <ion-card-content>
+  <ion-row>
+    <ion-col size="12">
+      <input type="file" (change)="handleFileInput($event)" name="resource"/>
+    </ion-col>      
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-input [(ngModel)]="caption" ngDefaultControl></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button color="primary" (click)="uploadResource($event)">Upload</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-card-content>
+</ion-card>

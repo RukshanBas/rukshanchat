@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: Tab1Page,
+  },
+  {
+    path: 'single-chat',
+    loadChildren: () => import('./single-chat/single-chat.module').then( m => m.SingleChatPageModule)
   }
 ];
 

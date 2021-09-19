@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>SignUp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+  <ion-grid>
+    
+    <ion-row>
+      <ion-col>
+        <ion-input type="text" [(ngModel)]="username" placeholder="Name"></ion-input>
+      </ion-col>
+     </ion-row>
+
+     <ion-row>
+      <ion-col>
+        <ion-input type="password" [(ngModel)]="pw" placeholder="Password"></ion-input>
+      </ion-col>
+     </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-input type="number" [(ngModel)]="mobileNo" placeholder="Mobile"></ion-input>
+      </ion-col>
+     </ion-row>
+     
+     <ion-row>
+      <ion-col align="center">
+        <ion-button color="primary" size="medium" (click)="signUp($event,username,pw,mobileNo)">Save</ion-button>
+      </ion-col>
+     </ion-row>
+
+  </ion-grid>
+
+  </ion-content>

@@ -5,7 +5,32 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  } , 
+  {
+    path: 'chats',
+    loadChildren: () => import('./tab1/tab1.module').then(m => m.Tab1PageModule)
+  },
+  {
+    path: 'toAddNewContact',
+    loadChildren: () => import('./tab3/to-add-new-contact/to-add-new-contact.module').then(m => m.ToAddNewContactPageModule)
+  }, 
+  {
+    path: 'toSingleChat/:userID',
+    loadChildren: () => import('./tab1/single-chat/single-chat.module').then(m => m.SingleChatPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'signUp',
+    loadChildren: () => import('./tab4/tab4.module').then( m => m.Tab4PageModule)
+  },
+  {
+    path: 'my-profile',
+    loadChildren: () => import('./my-profile/my-profile.module').then( m => m.MyProfilePageModule)
   }
+
 ];
 @NgModule({
   imports: [
